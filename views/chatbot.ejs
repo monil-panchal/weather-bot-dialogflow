@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Bot</title>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include("header"); -%>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">home</a></li>
+        <li class="breadcrumb-item active">weather</li>
+    </ol>
+    
+    <div class="registration-form">
+        <p>Type something like "How is today's weather"</p>
+        <iframe allow="microphone;" width="100%" height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/a172300a-59be-49c9-94b9-373c85cc8945">
+        </iframe>
+    </div>
+
+
+</body>
+
+</html>

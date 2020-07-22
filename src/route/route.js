@@ -12,6 +12,11 @@ const routes = (app) => {
             response.render('weather')
         })
 
+    app.route('/chatBot')
+        .get((request, response) => {
+            response.render('chatbot')
+        })
+
     app.route('/viewWeather')
         .post((request, response) => {
             var controller = new Controller()
