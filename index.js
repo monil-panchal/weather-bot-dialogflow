@@ -5,10 +5,10 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express()
-const SERVER_PORT = process.env.YOUR_PORT || process.env.PORT || 80;
+const SERVER_PORT = process.env.YOUR_PORT || process.env.PORT || 80;const SERVER_HOST = process.env.YOUR_HOST || '0.0.0.0';
 
 app.listen(SERVER_PORT, () => {
-    console.log(`Everything looks good. The online meeting application has started on port ${SERVER_PORT}`)
+    console.log(`Everything looks good. The online meeting application has started on ${SERVER_PORT}`)
 })
 
 // parse requests of content-type: application/x-www-form-urlencoded
