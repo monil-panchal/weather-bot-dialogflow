@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Bot</title>
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include("header"); -%>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">home</a></li>
+        <li class="breadcrumb-item active">weather</li>
+    </ol>
+    <div class="registration-form">
+        <h1 class="display-4">Search for weather</h1>
+        <form method="post" action="viewWeather" ngNativeValidate>
+            <div class="form-group">
+                <label for="title"></label>City</label>
+                <input type="text" name="cityName" class="form-control" required>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+        <br><br>
+        <div>
+            <% if (locals.weather) { %>
+            <div class="alert alert-success"><%= weather %></div>
+
+            <% } %>
+
+            <% if (locals.error) { %>
+            <div class="alert alert-danger"><%= error %></div>
+
+            <% } %>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
