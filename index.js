@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express()
-const SERVER_PORT = process.env.PORT || 8080;
+const SERVER_PORT = process.env.YOUR_PORT || process.env.PORT || 80;
 
 app.listen(SERVER_PORT, () => {
     console.log(`Everything looks good. The online meeting application has started on port ${SERVER_PORT}`)
