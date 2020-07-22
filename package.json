@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "nodemon ./index.js --exec babel-node index.js",
+    "start": "nodemon ./index.js --exec babel-node ./index.js",
     "deploy": "serverless deploy"
   },
   "author": "Monil Panchal",
@@ -25,9 +25,12 @@
     "nodemon": "^2.0.3"
   },
   "devDependencies": {
+    "@babel/node": "^7.10.5",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/core": "^7.1.2"
   },
   "type": "module"
 }
